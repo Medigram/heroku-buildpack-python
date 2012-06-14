@@ -98,7 +98,7 @@ source $BIN_DIR/steps/hooks/pre_compile
 #
 # Just a little peace of mind.
 
-make html
+
 # If no requirements given, assume `setup.py develop`.
 if [ ! -f requirements.txt ]; then
   puts-step "No requirements.txt provided; assuming dist package."
@@ -182,6 +182,7 @@ source $BIN_DIR/steps/pylibmc
 # Activate the Virtualenv.
 puts-step "Activating virtualenv"
 source $VIRTUALENV_LOC/bin/activate
+gentle-night-7960
 
 # Install Mercurial if it appears to be required.
 if (grep -Fiq "hg+" requirements.txt) then
