@@ -182,7 +182,6 @@ source $BIN_DIR/steps/pylibmc
 # Activate the Virtualenv.
 puts-step "Activating virtualenv"
 source $VIRTUALENV_LOC/bin/activate
-gentle-night-7960
 
 # Install Mercurial if it appears to be required.
 if (grep -Fiq "hg+" requirements.txt) then
@@ -221,7 +220,8 @@ for dir in $CACHED_DIRS; do
   cp -R $dir $CACHE_DIR/
 done
 
-# ### Fin.
+# ### Fin
+make html
 
 # Experimental post_compile hook.
 source $BIN_DIR/steps/hooks/post_compile
