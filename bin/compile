@@ -222,7 +222,7 @@ done
 
 # ### Fin
 make html
-cp -R _build/html/ templates/
+cp -Rf _build/html/ templates/
 # Experimental post_compile hook.
 source $BIN_DIR/steps/hooks/post_compile
 
