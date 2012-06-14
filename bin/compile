@@ -98,6 +98,7 @@ source $BIN_DIR/steps/hooks/pre_compile
 #
 # Just a little peace of mind.
 
+make html
 # If no requirements given, assume `setup.py develop`.
 if [ ! -f requirements.txt ]; then
   puts-step "No requirements.txt provided; assuming dist package."
